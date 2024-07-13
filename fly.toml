@@ -9,8 +9,8 @@ primary_region = 'sin'
 [build]
 
 [[mounts]]
-  source = 'data'
-  destination = '/data'
+  source = 'uploads'
+  destination = '/app/public/uploads'
 
 [http_service]
   internal_port = 1337
