@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "singularName": "item",
+    "pluralName": "items",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "server": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::server.server"
+    },
+    "amount": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "data": {
+      "type": "text",
+      "required": true
+    },
+    "sha1": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "preview": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "material": {
+      "type": "string",
+      "required": true
+    },
+    "retail": {
+      "type": "dynamiczone",
+      "components": [
+        "retail.sale"
+      ]
+    }
+  }
+}
